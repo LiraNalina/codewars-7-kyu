@@ -68,3 +68,22 @@ console.log(
     [27,21],[20,3],[21,20],[15,-2],[17,21],[54,-1],[19,22],[79,-2]
   ])
 );
+
+
+/* Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
+For example:
+solution([1, 2, 10, 50, 5]); // should return [1,2,5,10,50]
+solution(null); // should return [] */
+
+
+function solution(nums) {
+  let result = [];
+
+  if (nums === null) return [];
+
+  result = nums.sort((a, b) => a - b);
+
+  return result;
+}
+// console.log(solution([null]));
+console.log(solution([20, 2, 10]));
