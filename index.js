@@ -37,4 +37,4 @@ function checkNames(arr){
   return arr.filter((logins) => logins[0].match(/_$/));
 }
 
-console.log(checkNames([[ "foo", "foo@foo.com" ],["bar_", "bar@bar.com"]]));
+console.log(checkNames([[ "foo", "foo@foo.com" ], ["bar_", "bar@bar.com"]]));
