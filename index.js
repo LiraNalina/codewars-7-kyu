@@ -8,7 +8,7 @@
 //ageInDays(2015, 11, 1) returns "You are 29 days old"
 
 
-function ageDays(year, month, day) {
+/* function ageDays(year, month, day) {
     let a = [year, month, day];
     let b = new Date();
     let d = new Date(a);
@@ -17,7 +17,7 @@ function ageDays(year, month, day) {
     return "You are " + c + " days old";
   }
   
-  console.log(ageDays([2022, 3, 1]));
+  console.log(ageDays([2022, 3, 1])); */
 
 
   /* Javascript filter - 1
@@ -33,11 +33,11 @@ You have to use the filter-method which returns each element of the array for wh
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
  */
 
-function checkNames(arr){
+/* function checkNames(arr){
   return arr.filter((logins) => logins[0].match(/_$/));
 }
 
-console.log(checkNames([[ "foo", "foo@foo.com" ], ["bar_", "bar@bar.com"]]));
+console.log(checkNames([[ "foo", "foo@foo.com" ], ["bar_", "bar@bar.com"]])); */
 
 
 /* The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
@@ -50,7 +50,7 @@ Example
 input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
 output = ["Open", "Open", "Senior", "Open", "Open", "Senior"
  */
-function openOrSenior(data) {
+/* function openOrSenior(data) {
   let members = [];
 
   for (let i = 0; i < data.length; i++) {
@@ -67,7 +67,7 @@ console.log(
   openOrSenior([
     [27,21],[20,3],[21,20],[15,-2],[17,21],[54,-1],[19,22],[79,-2]
   ])
-);
+); */
 
 
 /* Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
@@ -76,7 +76,7 @@ solution([1, 2, 10, 50, 5]); // should return [1,2,5,10,50]
 solution(null); // should return [] */
 
 
-function solution(nums) {
+/* function solution(nums) {
   let result = [];
 
   if (nums === null) return [];
@@ -86,4 +86,21 @@ function solution(nums) {
   return result;
 }
 // console.log(solution([null]));
-console.log(solution([20, 2, 10]));
+console.log(solution([20, 2, 10])); */
+
+
+/* Most Digits
+Find the number with the most digits.
+If two numbers in the argument array have the same number of digits, return the first one in the array.
+ */
+
+function unusedDig(array) {
+  let a = [];
+
+  for (let i = 0; i < array.length; i++) {
+    a.push(array[i].toString());
+    a.sort((a, b) => b.length - a.length);
+  }
+  return parseInt(a[0], 10);
+}
+console.log(unusedDig([1, 10, 100]));
