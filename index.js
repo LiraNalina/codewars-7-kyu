@@ -166,7 +166,22 @@ arrayDiff([1,2,2,2,3],[2]) == [1,3] */
 
 
 
-function arrayDiff(a, b) {
+/* function arrayDiff(a, b) {
   return a.filter((elem) => !b.includes(elem));
 }
-console.log(arrayDiff([1, 2, 3], [1, 2]));
+console.log(arrayDiff([1, 2, 3], [1, 2])); */
+
+
+// Thinkful - List Drills: Longest word
+/* Complete the function that takes one argument, a list of words, and returns the length of the longest word in the list.
+
+For example:
+
+['simple', 'is', 'better', 'than', 'complex'] ==> 7
+
+Do not modify the input list. */
+
+function longest(words) {
+  return words.sort((a, b) => b.length - a.length)[0].length;
+}
+console.log(longest(["explicit", "is", "better", "than", "implicit"]));
