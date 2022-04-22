@@ -94,7 +94,7 @@ Find the number with the most digits.
 If two numbers in the argument array have the same number of digits, return the first one in the array.
  */
 
-function unusedDig(array) {
+/* function unusedDig(array) {
   let a = [];
 
   for (let i = 0; i < array.length; i++) {
@@ -103,7 +103,7 @@ function unusedDig(array) {
   }
   return parseInt(a[0], 10);
 }
-console.log(unusedDig([1, 10, 100]));
+console.log(unusedDig([1, 10, 100])); */
 
 
 /* Sum of All Arguments
@@ -138,7 +138,21 @@ str = "In 2015, I want to know how much does iPhone 6+ cost?"
 The numbers are 2015, 6
 Sum is 2021. */
 
-function sumNum(str) {
+/* function sumNum(str) {
   return (str.match(/\d+/g) || []).map(Number).reduce((a, b) => a + b, 0);
 }
+console.log(sumNum("In 2015, I want to know how much does iPhone 6+ cost?"));
+ */
+function sumFromString(str) {
+
+  var arr = str.split(/\D/g);
+  var res = 0;
+  
+  for(var i = 0; i < arr.length; i++){
+    res += +arr[i];
+  }
+  
+  return res;
+}
+
 console.log(sumNum("In 2015, I want to know how much does iPhone 6+ cost?"));
